@@ -11,11 +11,17 @@
 
 <button (click)="deleteRandomHero()">Borrar heroe aleatorio</button>
 
-<div *ngIf="deletedHeros.length > 0">
-    <h1>Deleted Heros</h1>
+<div *ngIf="deletedHeros.length > 0; else arrDeletedHerosEmpty">
+    <h3>Deleted Heros</h3>
     <ol>
         <li *ngFor="let deleted of deletedHeros">
             {{deleted}}
         </li>
     </ol>
 </div>
+
+<ng-template #arrDeletedHerosEmpty>
+    <h3>Deleted Heros</h3>
+    <h5>Without deleted heros. 😊❤</h5>
+</ng-template>
+
