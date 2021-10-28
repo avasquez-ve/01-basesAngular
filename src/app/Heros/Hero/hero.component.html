@@ -1,1 +1,18 @@
-<h1>Hero component works!</h1>
+<h1>{{nombre}}</h1>
+
+<dl>
+    <td>Nombre</td>
+    <dd>{{nombre}}</dd>
+
+    <td>Edad</td>
+    <dd>{{edad}}</dd>
+
+    <td>Método, nombre - edad</td>
+    <dd>{{combinarNombre()}}</dd>
+
+    <td>Nombre capitalizado</td>
+    <dd>{{nombreCapitalizado}}</dd>
+</dl>
+
+<button (click)="cambiarNombre()">Cambiar nombre</button>
+<button (click)="cambiarEdad()">Cambiar edad</button>
