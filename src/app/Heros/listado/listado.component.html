@@ -1,1 +1,21 @@
-<p>listado works!</p>
+<p>Listados component</p>
+
+<div>
+    <h1>My Heros</h1>
+    <ol>
+        <li *ngFor="let hero of heros; let i = index">
+           {{hero}}
+        </li>
+    </ol>
+</div>
+
+<button (click)="deleteRandomHero()">Borrar heroe aleatorio</button>
+
+<div>
+    <h1>Deleted Heros</h1>
+    <ol>
+        <li *ngFor="let deleted of deletedHeros">
+            {{deleted}}
+        </li>
+    </ol>
+</div>
