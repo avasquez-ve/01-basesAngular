@@ -11,7 +11,7 @@
 
 <button (click)="deleteRandomHero()">Borrar heroe aleatorio</button>
 
-<div>
+<div *ngIf="deletedHeros.length > 0">
     <h1>Deleted Heros</h1>
     <ol>
         <li *ngFor="let deleted of deletedHeros">
