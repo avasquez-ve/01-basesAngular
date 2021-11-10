@@ -13,13 +13,32 @@ interface Character {
 export class MainPageComponent {
   
   //global var
+  lstCharacters: Character[] = [
+    {
+      name: 'Goku',
+      power: 150000
+    },
+    {
+      name: "Vegeta",
+      power: 100000
+    }
+  ]
+
   character: Character = {
-    name: 'Trunks',
-    power: 18000
+    name: '',
+    power: 0
   }
 
   //Methods
   addDataToCharacter(): void{
-    console.log(this.character);
+    if (this.character.name.trim().length == 0) {
+      return;
+    }
+
+    this.lstCharacters.push(this.character)
+    this.character = {
+      name: '',
+      power: 0
+    }
   }
 }
