@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 
 import { MainPageComponent } from './main-page/main-page.component';
 
-
 @NgModule({
   declarations: [
     MainPageComponent
