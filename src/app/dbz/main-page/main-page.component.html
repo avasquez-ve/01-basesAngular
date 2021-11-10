@@ -15,11 +15,27 @@
     <div class="col">
         <h3>Add</h3>
         <hr>
-        <form>
-            <input type="text" placeholder="Name">
-            <input type="number" placeholder="Power">
 
-            <button>Add</button>
+        <!-- En caso de querer obtener el evento, usamos $event -->
+        <form (ngSubmit)="addDataToCharacter()">
+            <!-- [value]="character.name"
+            (input)="function($event)" --> <!-- Forma larga de setear y cambiar datos -->
+            <input 
+                type="text" 
+                placeholder="Name" 
+                name="name"
+                [(ngModel)]="character.name"
+            />
+            <!-- ngModel se usa para hacer two data binding, asignar y setear datos. -->
+            <input 
+                type="number" 
+                placeholder="Power" 
+                [value]="character.power"
+                name="power"
+                [(ngModel)]="character.power"
+            />
+
+            <button type="submit">Add</button>
         </form>
     </div>
 </div>
