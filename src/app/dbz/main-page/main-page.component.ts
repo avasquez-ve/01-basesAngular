@@ -11,6 +11,11 @@ import { Character } from '../interfaces/dbz.interface';
 export class MainPageComponent {
   
   //global var
+  character: Character = {
+    name:"Bulma",
+    power: 50
+  }
+
   lstCharacters: Character[] = [
     {
       name: 'Goku',
@@ -21,22 +26,11 @@ export class MainPageComponent {
       power: 100000
     }
   ]
-
-  character: Character = {
-    name: '',
-    power: 0
-  }
-
-  //Methods
-  addDataToCharacter(): void{
-    if (this.character.name.trim().length == 0) {
-      return;
-    }
-
-    this.lstCharacters.push(this.character)
-    this.character = {
-      name: '',
-      power: 0
-    }
+  
+  //methods
+  addNewCharacter(character: Character){
+    console.log(character);
+    this.lstCharacters.push(character);
+    console.log(this.lstCharacters);
   }
 }
